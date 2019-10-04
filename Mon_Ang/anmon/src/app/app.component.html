@@ -1,0 +1,26 @@
+<form method='POST' (ngSubmit)="register()">
+  <label>Empid</label>
+  <input type="text" name="eid"[(ngModel)]="id">
+  <label>name</label>
+  <input type="text" name="ename"[(ngModel)]="name">
+  <label>address</label>
+  <input type="text" name="eadd"[(ngModel)]="add">
+  <label>age</label>
+  <input type="text" name="eage"[(ngModel)]="age">
+  <button type="submit">Submit</button>
+  </form>
+  
+  <form method='GET' (ngSubmit)="extract()">
+    <label> name</label>
+    <input type="text" name="search" [(ngModel)]="e_name">
+    <button typ="submit">Extract</button>
+  </form>
+  <ul>
+    <li *ngFor="let item of response">
+      {{item.name}}--{{item.address}}
+    </li>
+  </ul>
+
+
+  <router-outlet></router-outlet>
+  
